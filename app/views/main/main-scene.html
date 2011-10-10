@@ -1,0 +1,29 @@
+<body>
+<div id="overlayMain2" class="overlay2">
+	<div x-mojo-element="Scroller" id="scrollerId">
+		<div class="scrollerContainer">
+			<table>
+				<tr>
+					<span id="mixText">#{mixInfo}</span><br><br>
+				</tr>
+				<tr>
+					<div class="palm-list" id="taglist" x-mojo-element="List" x-mojo-tap-highlight="delayed">
+						#{-listElements}
+					</div>
+				</tr>
+				<tr>
+					<div x-mojo-tap-feedback="delayed">
+						<div id="userFull"><span id="userInfo">#{user}</span></div><br>
+					</div>
+				</tr>
+				<tr>
+					<div x-mojo-tap-feedback="delayed">
+						<img src="images/playunselected.png" alt="playbutton" class="playIcon" id="play"/> 
+						<img src="images/blank.png" alt="likebutton" class="likeIcon" id="like"/>
+					</div>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+</body>

@@ -1,0 +1,53 @@
+.progressbarClass{
+	position:fixed;
+	//top: 420px;
+	bottom:23px;
+	left: 93px;
+	display:block;
+	padding-left: 7px;
+	padding-right: 7px; 
+	height: 5x;
+	width: 210px;
+	z-index:101;
+}
+
+.controls-container {
+    position: fixed;
+    left:0px;
+    width:320px;
+    heigth:100px;
+    //top: 400px;
+    bottom:-10px;
+    z-index: 100;
+    background:rgba(0,0,0,0.65);
+    //border: solid black;
+}
+
+.ctrl-button {
+	width: 50px;
+	height: 65px;
+	float: left;
+    background: url(../images/dashboard/dashboard_buttons.png) top left no-repeat;
+}
+
+.ctrl-button.selected { background-position-y: -48px; }
+.ctrl-button.pause { background-position-x: -48px; }
+.ctrl-button.next { background-position-x: -96px; }
+.ctrl-button.load{
+	position: relative;
+	top: -5px;
+	-webkit-animation-name: load2; 
+	-webkit-animation-duration: 2.0s; 
+	-webkit-animation-iteration-count: infinite; 
+	-webkit-animation-timing-function: cubic-bezier;
+	background: url(../images/loading/load4.png) center center no-repeat;
+	background-size: 40px 40px;
+}
+@-webkit-keyframes load2{
+	0% { -webkit-transform: rotate(0deg);}
+	50% {-webkit-transform: rotate(310deg); }
+	100% {-webkit-transform: rotate(0deg); }
+}
+
+
+

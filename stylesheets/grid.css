@@ -1,0 +1,122 @@
+.falling{
+			position:relative;
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 2.0s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-timing-function: ease-out-in;
+			/*-webkit-transform-style: preserves-3d;*/
+			/*-webkit-transform-origin: 50% -200%;*/
+}
+@-webkit-keyframes fade {
+			/* fade mixcover in */
+			0%   { opacity: 0; }
+			100% { opacity: 1; }
+		}
+		
+@-webkit-keyframes drop {
+			0%   { -webkit-transform: rotateX(-180deg); }
+			100% { -webkit-transform: rotateX(0deg); }
+		}
+		
+th#column1,th#column2{
+	width:50%; 
+	height:50px; 
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: 100%;
+	opacity: 1;
+	-webkit-transition: -webkit-transform 1s linear;
+}
+th#column1:active, th#column1:focus,th#column2:active, th#column2:focus{
+	-webkit-transform:scale(1.1,1.1);
+}
+
+th#mixInfo{
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: 100%;
+	-webkit-transition: -webkit-transform .5s ease-out;
+}
+th#mixInfo:active, th#mixInfo:focus{
+	-webkit-transform:scale(1.1,1.1);
+}
+.userImg{
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: 100%;
+}
+h2#creator{
+	height: 150px;
+	width: 250px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+h2#creatorSmall{
+	height: 50px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+h2, h2 {
+	text-align: left;
+	vertical-align: bottom;
+	height: 75px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+h2 span {
+   color: white;
+   font: bold 12px/14px Helvetica, Sans-Serif;
+   letter-spacing: 0px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 4px;
+}
+h2 span.spacer {
+   padding:0 2px;
+}
+h2#user{
+   color: white;
+   font: bold 12px/14px Helvetica, Sans-Serif;
+   letter-spacing: -1px;
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 3px;
+}
+//search list 
+
+dt#tagText {
+	font-family: Helvetica, Georgia, sans-serif;
+	color: #767676;
+	font-size: 11pt;
+}
+
+th#col2 {
+	padding: 2pt;
+	text-align: left;
+	vertical-align: top;
+}
+
+th#col1 {
+ vertical-align: top;
+ width: 70px;
+}
+dt#time {
+	text-align: left;
+	font-family: Impact;
+	color: #545454;
+	font-size: 10pt;
+}
+span#creator{
+	border:solid;  
+	border-color:white; 
+	background-color: white;  
+	text-align: left;
+	font-family: Impact;
+	color: black;
+	font-size: 9pt;
+	-webkit-border-radius:3pt; 
+}
+rightImg.empty{
+	opacity:0;
+}
+

@@ -1,0 +1,10 @@
+{
+	"id": "com.gmturbo.8tracks",
+	"version": "1.0.28",
+	"vendor": "GMTurbo",
+	"type": "web",
+	"main": "index.html",
+	"keywords": ["music", "eight","gmturbo"],
+	"title": "8tracks v2",
+	"icon": "8icon.png"
+}

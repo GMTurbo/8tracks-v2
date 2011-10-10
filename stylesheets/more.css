@@ -1,0 +1,48 @@
+.moreBut {
+	color: white;
+	font: bold 10px / 12px Helvetica,Sans - Serif;
+	letter-spacing: -1px;
+	/*background: rgba(28, 52, 86, 0.7);*/
+	background: rgba(0, 0, 0, 0.7);
+	padding: 2px;
+	-webkit-transition: -webkit-transform .5s ease-out;
+}
+h3.header{
+	position: relative;
+	top: -23px;
+	z-index:1000;
+	width: 180px;
+	color: white;
+	font: bold 24px / 24px Helvetica,Sans - Serif;
+	letter-spacing: -1px;
+	/*background: rgba(28, 52, 86, 0.7);*/
+	background: rgba(0, 0, 0, 0.65);
+	padding: 2px;
+}
+.moreBut:active, .moreBut:focus{
+	-webkit-transform:scale(1.3,1.3);
+}
+.done{
+	background: rgba(0, 0, 0, 0.0);
+}
+.searchBut{
+	-webkit-border-radius:5pt; 
+	color: white;
+	font: bold 9px / 12px Helvetica,Sans - Serif;
+	letter-spacing: -1px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+	padding: 2px;
+}
+div.Genre-button.selected, div.All-button.selected,div.User-button.selected {
+	-webkit-border-radius:5pt; 
+	color:white;
+	font: bold 9px / 12px Helvetica,Sans - Serif;
+	background: rgba(0, 0, 0, 0.3);
+	padding: 2px;
+	text-align: center;
+}
+div.Genre-button.unselected,div.All-button.unselected,div.User-button.unselected {
+	color:black;
+	float:right;
+}

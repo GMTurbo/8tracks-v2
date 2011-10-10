@@ -1,0 +1,39 @@
+<body>
+	<link rel="stylesheet" type="text/css" href="stylesheets/overlay.css">
+		<div id="overlayMain3" class="overlay2">
+			<div x-mojo-element="Scroller" id="scrollerId2">
+				<div class="scrollerContainer">
+					<table>
+						<tr>
+							<span id="mixText1">#{mixInfo}</span><br><br>
+						</tr>
+						<tr>
+							<div class="palm-list" id="taglist2" x-mojo-element="List" x-mojo-tap-highlight="delayed">
+								#{-listElements}
+							</div>
+						</tr>
+						<tr>
+							<div x-mojo-tap-feedback="delayed">
+								<div id="userFull"><span id="userInfo1">#{user}</span></div><br/>
+							</div>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div id="overlayMix" class="overlaymix">
+			<span id="text"><i>I<br>N<br>F<br>O</i></span>
+		</div>
+		<div id="overlayImage" class="overlayimg #{fade}"></div>
+		<div img id="overlayHeart" class="overlayheart" src="../images/blank.png"></div>
+		<div img id="overlayNewMix" class="overlaynextmix" src="../images/blank.png"></div>
+		<div id="addcomment">
+			<img class="overlayaddcomment" src="../images/blank.png"/>
+		</div>
+		<div id="inputcomment">
+			<span class="point"></span>
+			<span class="bubble"><div id="multilineTextField" x-mojo-element="TextField" style="overflow: hidden; max-height:90px; padding:5px;"></div></span>
+			<span id="sendbuttonid" class="sendbutton #{show}">Send</span>
+		</div>
+	</link>
+</body>

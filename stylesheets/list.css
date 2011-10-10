@@ -1,0 +1,149 @@
+//@charset "utf-8";
+
+.title#titleText {
+	font-family: 'Times New Roman', sans-serif;
+	padding: 2pt;
+	vertical-align: top;
+	font-size: 10pt;
+}
+
+dt#tagText {
+	font-family: Helvetica, Georgia, sans-serif;
+	color: #767676;
+	font-size: 11pt;
+}
+
+th#col2 {
+	padding: 2pt;
+	text-align: left;
+	vertical-align: top;
+}
+
+th#col1 {
+ vertical-align: top;
+ width: 70px;
+}
+dt#time {
+	text-align: left;
+	font-family: Impact;
+	color: #545454;
+	font-size: 10pt;
+}
+span#creator{
+	border:solid;  
+	border-color:white; 
+	background-color: white;  
+	text-align: left;
+	font-family: Impact;
+	color: black;
+	font-size: 9pt;
+	-webkit-border-radius:3pt; 
+}
+
+.floatleft {
+	float: left;
+	vertical-align: text-top;
+	margin: 1px;
+	width: 65px;
+	height: 65px;
+	-webkit-border-radius:2px;
+	-webkit-transition: -webkit-transform .5s ease-out;
+	border:none;
+}
+.floatleft:active,.floatleft:focus{
+	z-index:10;
+	-webkit-transform:rotate(2deg) scale(1,1);
+}
+	
+dt#artistText {
+	font-family: Georgia, sans-serif;
+	color: #545454;
+	font-size: 12pt;
+}
+dt#length {
+	font-family: Georgia, sans-serif;
+	color: #767676;
+	font-size: 11pt;
+}
+div#currentSong {
+	font-family: Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 12pt;
+}
+div#oldSong {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+}
+div#skippedSong {
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	text-decoration: line-through; 
+}
+.likeimg {
+	float: center;
+	vertical-align: top;
+	padding:10pt;
+	-webkit-transition: -webkit-transform .5s ease-out;
+}
+.likeimg:active, .likeimg:visited{
+	border:solid;  
+	border-color:black; 
+	background-color: white;  
+	-webkit-border-radius:5pt; 
+	padding:2pt; 
+	-webkit-transform:rotate(360deg) scale(1.2,1.2);
+}
+.buyimg {
+	float: center;
+	vertical-align: top;
+	padding:3pt;
+	-webkit-transition: -webkit-transform .1s ease-out;
+}
+.buyimg:active{
+	border:solid;  
+	border-color:black; 
+	background-color: #FFFFFF;  
+	-webkit-border-radius:5pt; 
+	padding:2pt; 
+	-webkit-transform:rotate(0deg) scale(1.2,1.2);
+}
+.current{
+	position:relative;
+	right:-320px;
+} 
+/* OVERLAY FOR LIST ITEMS (ABANDONED)
+.itemOverlay{
+	position: relative;
+	background: rgba(0,0,0,0.4);
+	right: -185px;
+	bottom: -50px;
+	width: 120px;
+	height:50px;
+	-webkit-transition-property: right;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  z-index:20;
+}
+.iol{
+	position: relative;
+	top:10px;
+	background: url('../images/likedstar.png') center center no-repeat;
+	width:32px;
+	height:32px;
+}
+.iob{
+	position: relative;
+	top:10px;
+	background: url('../images/buy.png') center center no-repeat;
+	width:32px;
+	height:32px;
+}
+.iow{
+	position: relative;
+	top:10px;
+	background: url('../images/write.png') center center no-repeat;
+	background-size: 100%;
+	width:32px;
+	height:32px;
+}
+*/

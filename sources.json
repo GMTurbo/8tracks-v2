@@ -1,0 +1,66 @@
+[
+    {
+        "source": "lib/themeManager.js"
+    }, 
+    {
+        "source": "lib/audio.js"
+    }, 
+    {
+        "source": "lib/justType.js"
+    }, 
+    {
+        "source": "lib/timeSince.js"
+    }, 
+    {
+        "source": "lib/globals.js"
+    }, 
+    {
+        "source": "app/assistants/stage-assistant.js"
+    }, 
+    {
+        "source": "app/assistants/dashboard-assistant.js"
+    }, 
+    {
+        "source": "app/assistants/app-assistant.js"
+    }, 
+    {
+        "source": "app/views/main/main-chrome.js", 
+        "scenes": "main"
+    }, 
+    {
+        "source": "app/assistants/main-assistant.js", 
+        "scenes": "main"
+    }, 
+    {
+        "source": "app/assistants/player-assistant.js", 
+        "scenes": "player"
+    }, 
+    {
+        "source": "app/views/player/player-chrome.js", 
+        "scenes": "player"
+    }, 
+    {
+        "source": "app/assistants/realPlayer-assistant.js", 
+        "scenes": "realPlayer"
+    }, 
+    {
+        "source": "app/views/realPlayer/realPlayer-chrome.js", 
+        "scenes": "realPlayer"
+    }, 
+    {
+        "source": "app/assistants/picViewer-assistant.js", 
+        "scenes": "picViewer"
+    }, 
+    {
+        "source": "app/views/picViewer/picViewer-chrome.js", 
+        "scenes": "picViewer"
+    }, 
+    {
+        "source": "app/assistants/UserInfoScene-assistant.js", 
+        "scenes": "UserInfoScene"
+    }, 
+    {
+        "source": "app/views/UserInfoScene/UserInfoScene-chrome.js", 
+        "scenes": "UserInfoScene"
+    }
+]

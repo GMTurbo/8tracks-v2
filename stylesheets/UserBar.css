@@ -1,0 +1,55 @@
+.barcontainer{
+	/*background: url(../images/profileButMini.png) top center no-repeat;*/
+}
+th#createdcol{
+	height: 72px;
+	width: 100px;
+	align:center;
+}
+th#likedcol{
+	height: 72px;
+	width: 100px;
+	align:center;
+}
+
+.created{
+	height: 72px;
+	width: 125px;
+	background: url(../images/profileButMini.png) top left no-repeat;
+	-webkit-border-radius: 5px;
+}
+.liked{
+	height: 72px;
+	width: 130px;
+	background: url(../images/profileButMini.png) top right no-repeat;
+	-webkit-border-radius: 5px;
+}
+.showliked{
+	background-position-y: -69px;
+}
+.showcreated{
+	background-position-y: -69px;
+}
+h3#likedcount{
+	position: fixed;
+	bottom: 18px;
+	left: 280px;
+	width: 60px;
+}
+h3#createdcount{
+	position: fixed;
+	bottom: 18px;
+	left: 125px;
+	width: 60px;
+}
+h3 span{
+	color: white;
+	font: bold 15px/14px Helvetica, Sans-Serif;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(0, 0, 0, 0.85);
+	-webkit-border-radius:15px;
+	padding: 7px;
+}
+.notready{
+	opacity: 0;
+}

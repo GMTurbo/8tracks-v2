@@ -1,0 +1,34 @@
+/*
+<body>
+<link rel="stylesheet" type="text/css" href="stylesheets/user.css">
+        <div class="userContainer" id="usercon">
+            <table style="width:100%">
+                <tr>
+                    <th>
+                        <img class="userimgclass" id="userimgid" src="#{userimage}">
+                    </th>
+                    <th>
+                        <dt class="usernameclass" id="usernameid"> #{username} </dt>
+                        <dt class="userlocalclass" id="userlocalid"> #{userlocal} </dt>
+                        <dt class="userdescriptionclass" id="userdescriptionid"> #{userdescription} </dt>
+                    </th>
+                </tr>
+            </table>
+        </div>
+</link>
+</body>
+*/
+th.userimgclass{
+	width:100px;
+	height:100px;
+	font: bold 9px / 12px Helvetica,Sans - Serif;
+}
+dt.usernameclass{
+	font: bold 9px / 12px Helvetica,Sans - Serif;
+}
+dt.userlocalclass{
+	font: bold 9px / 12px Helvetica,Sans - Serif;
+}
+dt.userdescriptionclass{
+	font: bold 9px / 12px Helvetica,Sans - Serif;
+}

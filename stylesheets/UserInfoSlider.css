@@ -1,0 +1,63 @@
+.userinfocontainer{
+	
+}
+
+th#userinfopiccol{
+	vertical-align: text-top;
+	width: 100px;
+	height: 100px;
+}
+
+th#userinfopiccol{
+	align: left;
+	vertical-align: text-top;
+}
+
+.userimage{
+	/*vertical-align: text-top;*/
+	height:100%;
+	width:100%;
+	//background: url(../images/unknownUser.jpg) center center no-repeat;
+	background-size: 100%;
+}
+
+th#userinfodetailscol{
+	vertical-align: top;
+	text-align: left;
+	width: 200px;
+	height: 100%;
+}
+
+dt#username{
+	font: bold 24px/24px Prelude, Sans-Serif;
+}
+
+dt#location{
+	font: italic 16px/16px Helvetica, Sans-Serif;
+	color: #4a4344;
+}
+
+dt#description{
+	font: 14px/14px Helvetica, Sans-Serif;
+	color: #4a4344;
+}
+
+div#userinfofollow{
+	position: relative;
+	top: 25px;
+	align: left;
+	width: 105px;
+	height: 32px;
+}
+
+.follow{
+	height:100%;
+	width:100%;
+	background: url(../images/white_buttons.png) top left no-repeat;
+	background-position-x: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.unfollow{
+	background-position-x: -100px;
+}
