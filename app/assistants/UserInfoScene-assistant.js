@@ -204,7 +204,7 @@ UserInfoSceneAssistant.prototype = {
 			spinner(false);
 			popUp(transport.responseJSON.status, transport.responseJSON.notices[0], this.controller);
 		};
-		var url = "http://8tracks.com/sets/" + this.token + "/play.json?mix_id=" + this.mix.id;
+		var url = "http://8tracks.com/sets/" + this.token + "/play.json?mix_id=" + this.mix.id + "&" + API_KEY;
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
 	list2Fetchitems: function(inSender, inListElement, inOffset, inCount) {
@@ -251,7 +251,7 @@ UserInfoSceneAssistant.prototype = {
 			showBanner("Failed to retrieve Created mixes");
 			this.fillLikedMixes();
 		};
-		var url = "http://8tracks.com/users/" + this.userInfo.login + "/mixes.json?per_page=300";
+		var url = "http://8tracks.com/users/" + this.userInfo.login + "/mixes.json?per_page=300&"+API_KEY;
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
 
@@ -278,7 +278,7 @@ UserInfoSceneAssistant.prototype = {
 			spinner(false);
 			showBanner("Failed to retrieve liked mixes");
 		};
-		var url = "http://8tracks.com/users/" + this.userInfo.login + "/mixes.json?view=liked&per_page=250";
+		var url = "http://8tracks.com/users/" + this.userInfo.login + "/mixes.json?view=liked&per_page=250&" + API_KEY;
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
 	html1Tap: function(inSender, event) {
@@ -297,7 +297,7 @@ UserInfoSceneAssistant.prototype = {
 	},
 	followUser: function() {
 		var postdata = "login=" + this.creds.username + "&password=" + this.creds.password;
-		var url = "http://8tracks.com/users/" + this.userInfo.id + "/follow.json";
+		var url = "http://8tracks.com/users/" + this.userInfo.id + "/follow.json&"+API_KEY;
 		var onFailure = function(transport) {
 			popUp("Error", "Could not follow user. Try to login again");
 			spinner(false);
@@ -306,7 +306,7 @@ UserInfoSceneAssistant.prototype = {
 	},
 	unFollowUser: function() {
 		var postdata = "login=" + this.creds.username + "&password=" + this.creds.password;
-		var url = "http://8tracks.com/users/" + this.userInfo.id + "/unfollow.json";
+		var url = "http://8tracks.com/users/" + this.userInfo.id + "/unfollow.json&"+API_KEY;
 		var onFailure = function(transport) {
 			popUp("Error", "Could not unfollow user. Try to login again");
 			spinner(false);

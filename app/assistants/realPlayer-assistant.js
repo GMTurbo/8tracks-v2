@@ -448,7 +448,7 @@ RealPlayerAssistant.prototype = {
 			this.controller.get("multilineTextField").mojo.setValue("");*/
 		};
 		var postdata = "login=" + this.creds.username + "&password=" + this.creds.password;
-		var url = "http://8tracks.com/reviews.xml";
+		var url = "http://8tracks.com/reviews.xml&"+API_KEY;
 		var postbody = "review[mix_id]=" + this.mixInfo.id + "&review[body]=" + message.replace(/ /g, "%20");
 		post(url, postdata, onComplete.bind(this), onFailure.bind(this), postbody);
 		}else{
@@ -480,7 +480,7 @@ RealPlayerAssistant.prototype = {
 			spinner(false);
 		};
 
-		var url = "http://8tracks.com/mixes/" + this.mixInfo.id + "/reviews.json?per_page=50";
+		var url = "http://8tracks.com/mixes/" + this.mixInfo.id + "/reviews.json?per_page=50&" + API_KEY;
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
 	handleUpdate: function(event) {
@@ -926,14 +926,14 @@ RealPlayerAssistant.prototype = {
 					spinner(false);
 					popUp("Failure", "692 realPlayer-assistant.js");
 				};
-				url = "http://8tracks.com/sets/" + this.token + "/play.json?mix_id=" + this.mixInfo.id;
+				url = "http://8tracks.com/sets/" + this.token + "/play.json?mix_id=" + this.mixInfo.id+ "&" + API_KEY;
 				request(url, onComplete.bind(this), onFailure.bind(this));
 			}
 		};
 		var onFailure = function(transport) {
 			this.controller.stageController.popScene(true);
 		};
-		url = "http://8tracks.com/sets/" + this.token + "/play_next_mix.json?mix_id=" + this.mixInfo.id;
+		url = "http://8tracks.com/sets/" + this.token + "/play_next_mix.json?mix_id=" + this.mixInfo.id+ "&" + API_KEY;
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
 	nextTrack: function() {
@@ -982,7 +982,7 @@ RealPlayerAssistant.prototype = {
 		var onFailure = function(transport) {
 			popUp("Oops", "Error getting next track...", this.controller);
 		};
-		url = "http://8tracks.com/sets/" + this.token + "/next.json?mix_id=" + this.mixInfo.id;
+		url = "http://8tracks.com/sets/" + this.token + "/next.json?mix_id=" + this.mixInfo.id + "&" + API_KEY;
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
 
@@ -1034,7 +1034,7 @@ RealPlayerAssistant.prototype = {
 			popUp("Oops", "No more skips allowed...", this.controller);
 			this.sendMessageToDash("No more skips allowed");
 		};
-		url = "http://8tracks.com/sets/" + this.token + "/skip.json?mix_id=" + this.mixInfo.id;
+		url = "http://8tracks.com/sets/" + this.token + "/skip.json?mix_id=" + this.mixInfo.id+ "&" + API_KEY;
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
 	///////////////////////////////////////////////////
@@ -1150,14 +1150,14 @@ RealPlayerAssistant.prototype = {
 	setLikeState: function(song, state) {
 		this.song = song;
 		onFailure = function(transport) {
-			popUp("Error", "Could not Like this song! Try to login again...", this.controller);
+			//popUp("Error", "Could not Like this song! Try to login again...", this.controller);
 		};
 		var postdata = "login=" + this.username + "&password=" + this.password;
 		if (!state) {
-			url = "http://8tracks.com/tracks/" + song.id + "/fav.json";
+			url = "http://8tracks.com/tracks/" + song.id + "/fav.json&"+API_KEY;
 			post(url, postdata, this.songLiked.bind(this), onFailure.bind(this));
 		} else {
-			url = "http://8tracks.com/tracks/" + song.id + "/unfav.json";
+			url = "http://8tracks.com/tracks/" + song.id + "/unfav.json&"+API_KEY;
 			post(url, postdata, this.songUnliked.bind(this), onFailure.bind(this));
 		}
 	},
@@ -1178,7 +1178,7 @@ RealPlayerAssistant.prototype = {
 			showBanner("Could not add mix to your liked mix. Try to login again");
 		};
 		postdata = "login=" + this.creds.username + "&password=" + this.creds.password;
-		url = "http://8tracks.com/mixes/" + this.mixInfo.id + "/like.json";
+		url = "http://8tracks.com/mixes/" + this.mixInfo.id + "/like.json?"+ API_KEY;
 		post(url, postdata, this.LikedComplete.bind(this), onFailure.bind(this));
 	},
 	LikedComplete: function(response) {
@@ -1198,7 +1198,7 @@ RealPlayerAssistant.prototype = {
 			showBanner("Could not remove mix to your liked mix. Try to login again");
 		};
 		postdata = "login=" + this.creds.username + "&password=" + this.creds.password;
-		url = "http://8tracks.com/mixes/" + this.mixInfo.id + "/unlike.json";
+		url = "http://8tracks.com/mixes/" + this.mixInfo.id + "/unlike.json&"+API_KEY;
 		post(url, postdata, this.UnLikedComplete.bind(this), onFailure.bind(this));
 	},
 	UnLikedComplete: function(response) {

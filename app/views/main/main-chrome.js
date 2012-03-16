@@ -191,7 +191,7 @@ opus.Gizmo({
 			snapElements: "slider1, slider2,slider3,slider4,slider5,slider6,slider7,slider8,slider9",
 			snapIndex: "0",
 			scrollPosition: {
-				left: -2560,
+				left: 0,
 				top: 0
 			},
 			type: "Palm.Mojo.Scroller",
@@ -253,7 +253,7 @@ opus.Gizmo({
 							items: [],
 							useSampleData: false,
 							title: undefined,
-							itemHtml: "<div class=\"palm-row grid-cell\" x-mojo-tap-highlight=\"delayed\" style=\"padding:1pt;\"> \n<link rel=\"stylesheet\" type=\"text/css\" href=\"stylesheets/list.css\">\n  <div class=\"title\">\n    <mixInfo=\"mixInfo\">\n    <set_id=\"set_id\">\n    <tag=\"tag\">\n    <creator=\"creator\">\n    <timeSince=\"timeSince\">\n    <table style=\"padding:1pt;\" class=\"falling\">\n    <tr>\n      <th id=\"col1\"><img src=\"#{leftImage}\" class=\"floatleft\"></th>\n      <th id=\"col2\">\n        <dt id=\"titleText\" style=\"font-family:Tahoma;font-size:13pt;\"> #{title} </dt>\n        <dt id=\"tagText\"> #{tag}&nbsp;<i>#{creator}</i></dt>\n        <dt id=\"time\"> #{timeSince} </dt>\n      </th>\n    </tr>\n    </table>\n  </div>  \n</link>\n</div>  ",
+							itemHtml: "<div class=\"palm-row grid-cell\" x-mojo-tap-highlight=\"delayed\" style=\"padding:1pt;\"> \n  <div class=\"title\">\n    <mixInfo=\"mixInfo\">\n    <set_id=\"set_id\">\n    <tag=\"tag\">\n    <creator=\"creator\">\n    <timeSince=\"timeSince\">\n    <table style=\"padding:1pt;\" class=\"falling\">\n    <tr>\n      <th id=\"col1\"><img src=\"#{leftImage}\" class=\"floatleft\" /></th>\n      <th id=\"col2\">\n        <dt id=\"titleText\" style=\"font-family:Tahoma;font-size:13pt;\"> #{title} </dt>\n        <dt id=\"tagText\"> #{tag}&nbsp;<i>#{creator}</i></dt>\n        <dt id=\"time\"> #{timeSince} </dt>\n      </th>\n    </tr>\n    </table>\n  </div>  \n</div>  ",
 							onlisttap: "searchListTap",
 							onfetchitems: "",
 							swipeToDelete: false,
@@ -308,7 +308,7 @@ opus.Gizmo({
 							items: [],
 							useSampleData: false,
 							title: undefined,
-							itemHtml: "<div x-mojo-tap-highlight=\"delayed\">\n<link rel=\"stylesheet\" type=\"text/css\"href=\"stylesheets/grid.css\"> \n    <table style=\"padding:1pt;vertical-align:top; width:100%; height:50px\" class=\"falling\"> \n    <tr>\n      <div x-mojo-tap-feedback=\"delayed\">\n        <th id=\"column1\" style=\"background-image:url(#{leftImage})\"> <class=\"leftImg\" x-mojo-tap-highlight=\"delayed\">\n          <h2 id=\"mix1\"><span id=\"mix1\">#{mixName1}</h2>\n          <mixInfo1=#{mixInfo1)>\n        </th> \n      </div>\n      <div x-mojo-tap-feedback=\"delayed\">\n        <th id=\"column2\" style=\"background-image:url(#{rightImage})\"> <class=\"rightImg #{emtpy}\" x-mojo-tap-highlight=\"delayed\">\n          <h2 id=\"mix2\"><span id=\"mix2\">#{mixName2}</h2>\n          <mixInfo2=#{mixInfo2)>\n        </th>\n      </div>\n    </tr> \n    </table> \n  </div>  \n</link> \n</div>",
+							itemHtml: "<div x-mojo-tap-highlight=\"delayed\">\n    <table style=\"padding:1pt;vertical-align:top; width:100%; height:50px\" class=\"falling\"> \n    <tr>\n      <div x-mojo-tap-feedback=\"delayed\">\n        <th id=\"column1\" style=\"background-image:url(#{leftImage})\"> <class=\"leftImg\" x-mojo-tap-highlight=\"delayed\">\n          <h2 id=\"mix1\"><span id=\"mix1\">#{mixName1}</h2>\n          <mixInfo1=#{mixInfo1)>\n        </th> \n      </div>\n      <div x-mojo-tap-feedback=\"delayed\">\n        <th id=\"column2\" style=\"background-image:url(#{rightImage})\"> <class=\"rightImg #{empty}\" x-mojo-tap-highlight=\"delayed\">\n          <h2 id=\"mix2\"><span id=\"mix2\">#{mixName2}</h2>\n          <mixInfo2=#{mixInfo2)>\n        </th>\n      </div>\n    </tr> \n    </table> \n  </div>  \n</div>",
 							onlisttap: "Listtap",
 							onitemrendered: "",
 							onfetchitems: "list1Fetchitems",

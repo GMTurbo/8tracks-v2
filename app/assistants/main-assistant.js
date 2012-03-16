@@ -213,50 +213,7 @@ MainAssistant.prototype = {
 				{
 				label: "Support",
 				command: 'support'
-			}/*
-				{
-				label: $L("Default Mix"),
-				items: [
-					{
-					label: "Featured",
-					command: 4,
-					iconPath: defmix == 4 ? Mojo.appPath + "/images/check_mark.png" : "none"
-				},
-					{
-					label: "Latest",
-					command: 0,
-					iconPath: defmix === 0 ? Mojo.appPath + "/images/check_mark.png" : "none"
-				},
-					{
-					label: "Popular",
-					command: 1,
-					iconPath: defmix == 1 ? Mojo.appPath + "/images/check_mark.png" : "none"
-				},
-					{
-					label: "Hot",
-					command: 2,
-					iconPath: defmix == 2 ? Mojo.appPath + "/images/check_mark.png" : "none"
-				},
-					{
-					label: "Random",
-					command: 3,
-					iconPath: defmix == 3 ? Mojo.appPath + "/images/check_mark.png" : "none"
-				},
-					{
-					label: "Liked",
-					command: 5,
-					iconPath: defmix == 5 ? Mojo.appPath + "/images/check_mark.png" : "none",
-					disabled: !this.loggedin
-				},
-					{
-					label: "My Mixes",
-					command: 6,
-					iconPath: defmix == 6 ? Mojo.appPath + "/images/check_mark.png" : "none",
-					disabled: !this.loggedin
-				}
-					]
-			}*/
-				]
+			}]
 		};
 
 		this.typelabel = "Latest";
@@ -699,7 +656,7 @@ MainAssistant.prototype = {
 			onFailure = function(transport) {
 				showBanner("search failed");
 			};
-			url = "http://8tracks.com/users/" + this.userid + "/mixes.json?view=liked&q=" + splitter.join("+") + "&per_page="+this.pageCounts.liked.total*12;
+			url = "http://8tracks.com/users/" + this.userid + "/mixes.json?view=liked&q=" + splitter.join("+") + "&per_page="+this.pageCounts.liked.total*12 + "&" + API_KEY;
 			request(url, onComplete.bind(this), onFailure.bind(this));
 		}
 	},
@@ -763,7 +720,7 @@ MainAssistant.prototype = {
 			spinner(false);
 			popUp("Oops!", "Search Error", this.controller);
 		};
-		url = "http://8tracks.com/mixes.json?" + this.searchCriteria + "=" + this.controller.get('SearchtextField').mojo.getValue() + "&page=" + pagecount;
+		url = "http://8tracks.com/mixes.json?"+ this.searchCriteria + "=" + this.controller.get('SearchtextField').mojo.getValue() + "&page=" + pagecount+ "&" + API_KEY;
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
 	popupChoose: function(event) {
@@ -1128,15 +1085,15 @@ MainAssistant.prototype = {
 				return pageCounts.mixfeed.current;
 			}
 		};
-		url = "http://8tracks.com/mixes.json?page=" + getPageCount(type, this.pageCounts) + "&sort=" + type + "&per_page=12";
+		url = "http://8tracks.com/mixes.json?page=" + getPageCount(type, this.pageCounts) + "&sort=" + type + "&per_page=12"+ "&" + API_KEY;
 		if (type === "liked") {
-			url = "http://8tracks.com/users/" + this.userid + "/mixes.json?view=liked&page=" + getPageCount(type, this.pageCounts) + "&per_page=12";
+			url = "http://8tracks.com/users/" + this.userid + "/mixes.json?view=liked&page=" + getPageCount(type, this.pageCounts) + "&per_page=12"+ "&" + API_KEY;
 		} else if (type === "mine") {
-			url = "http://8tracks.com/users/" + this.userid + "/mixes.json?page=" + getPageCount(type, this.pageCounts) + "&per_page=12";
+			url = "http://8tracks.com/users/" + this.userid + "/mixes.json?page=" + getPageCount(type, this.pageCounts) + "&per_page=12"+ "&" + API_KEY;
 		} else if (type === "featured") {
-			url = "http://8tracks.com/mix_sets/featured.json?page=" + getPageCount(type, this.pageCounts) + "&per_page=12";
+			url = "http://8tracks.com/mix_sets/featured.json?page=" + getPageCount(type, this.pageCounts) + "&per_page=12"+ "&" + API_KEY;
 		} else if (type === "mixfeed") {
-			url = "http://8tracks.com/users/" + this.userid + "/mixes.json?view=mix_feed&page=" + getPageCount(type, this.pageCounts) + "&per_page=12";
+			url = "http://8tracks.com/users/" + this.userid + "/mixes.json?view=mix_feed&page=" + getPageCount(type, this.pageCounts) + "&per_page=12"+ "&" + API_KEY;
 		}
 		request(url, onComplete.bind(this), onFailure.bind(this));
 	},
@@ -1192,7 +1149,7 @@ MainAssistant.prototype = {
 			};
 
 			var postdata = "login=" + this.creds.username + "&password=" + this.creds.password;
-			var url = "http://8tracks.com/mixes/" + this.mix.id + "/like.json";
+			var url = "http://8tracks.com/mixes/" + this.mix.id + "/like.json&" + API_KEY;
 			post(url, postdata, this.LikedComplete.bind(this), onFailure.bind(this));
 		} else {
 			showBanner("login required to like mixes");
@@ -1214,7 +1171,7 @@ MainAssistant.prototype = {
 				popUp("Error", "Could not remove mix to your liked mix. Try to login again", this.controller);
 			};
 			var postdata = "login=" + this.creds.username + "&password=" + this.creds.password;
-			url = "http://8tracks.com/mixes/" + this.mix.id + "/unlike.json";
+			url = "http://8tracks.com/mixes/" + this.mix.id + "/unlike.json&"+API_KEY;
 			post(url, postdata, this.UnLikedComplete.bind(this), onFailure.bind(this));
 		}
 	},

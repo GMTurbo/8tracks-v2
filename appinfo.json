@@ -1,6 +1,6 @@
 {
 	"id": "com.gmturbo.8tracks",
-	"version": "1.0.28",
+	"version": "1.0.3",
 	"vendor": "GMTurbo",
 	"type": "web",
 	"main": "index.html",

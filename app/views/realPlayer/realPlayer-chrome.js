@@ -80,7 +80,7 @@ opus.Gizmo({
 					mode: "horizontal-snap",
 					snapElements: "scroller3,scroller7",
 					scrollPosition: {
-						left: -320,
+						left: 0,
 						top: 0
 					},
 					type: "Palm.Mojo.Scroller",
